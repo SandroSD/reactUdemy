@@ -1,0 +1,7 @@
+  - JSX sintaxis: javascript como html para React.
+
+  class = className
+
+  video 6
+
+  https://codepen.io/anon/pen/yEYoRe
