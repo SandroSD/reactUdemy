@@ -1,7 +1,38 @@
+  Página Oficial: https://reactjs.org/
   - JSX sintaxis: javascript como html para React.
 
   class = className
 
-  video 6
-
   https://codepen.io/anon/pen/yEYoRe
+
+  - UI State becomes difficults to handle with Vanilla JSX.
+  - Focus on Business Logic, not on preventing your app form exploding => Framework Creators probably write better code.
+  - Huge Ecosystem, Active Community, High performance
+
+  Two kinds of applications
+
+  - Single Page Applications (SPA)
+    - Only ONE HTML Page, Content is (re)rendered on Client.
+      - React Components.
+      - Typically only ONE ReactDOM.render() call.
+  
+  - Multi Page Applications (MPA)
+    - Mutilple HTML Pages, Content is rendered on Server.
+    - One ReactDOM.render() call per "widget".
+
+Course Outline
+  - Getting Started.
+  - The Basics.
+  - Debugging.
+  - Styling Components.
+  - Components Deep Dive.
+  - HTTP Requests.
+  - Routing.
+  - Forms & Validations.
+  - Redux.
+  - Authentication.
+  - Testing Introduction.
+  - Deployment.
+  - Bonus (Animations, Next Steps, Webpack).
+
+  Seguir Desde el Video 15, Sección 2.
