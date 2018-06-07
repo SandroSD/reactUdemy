@@ -1,0 +1,21 @@
+Recomended for SPAs and MPAs
+
+Why?
+    - Optimize Code.
+    - Use Next - Gen Javascript features. (ES6 vs ES5)
+    - Be More Productive.
+How?
+    - Use Dependency Tool (npm or yarn).
+    - Use Bundler, Recomended: Webpack.
+    - Use Compiler (Next-Gen Javascript) Babel + Presets.
+    - Use a Development Server.
+
+https://github.com/facebook/create-react-app
+
+Instalar Carpeta inicial:
+npm install create-react-app -g    //-g: variable global para qe se pueda acceder dsd toda la pc.
+create-react-app nombreProyecto
+npm start (en el directorio donde está el package.json)
+
+
+ver desde el video 32.
