@@ -64,4 +64,4 @@ crear otro objeto y copiar el contenido con el operador ...
 install package to use :hover css pseudoclass. //higher order controller, inject some extra sintaxs.
   npm install --save radium
 
-  mirar apartir del video 65.
+Envolver todo lo que esta adentro de return con los tags StyleRoot para poder usar Radium y sus media queries.
