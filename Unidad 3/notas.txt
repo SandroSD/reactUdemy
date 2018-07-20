@@ -17,5 +17,11 @@ npm install create-react-app -g    //-g: variable global para qe se pueda accede
 create-react-app nombreProyecto
 npm start (en el directorio donde está el package.json)
 
+se pueden pasar métodos como props para ser llamados en otros objetos y no definirlos extendiendo de Component.
 
-ver desde el video 32.
+create-react-app: https://github.com/facebookincubator/create-react-app
+Introducing JSX: https://reactjs.org/docs/introducing-jsx.html
+Rendering Elements: https://reactjs.org/docs/rendering-elements.html
+Components & Props: https://reactjs.org/docs/components-and-props.html
+Listenable Events: https://reactjs.org/docs/events.html
+

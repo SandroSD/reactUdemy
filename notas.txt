@@ -35,4 +35,33 @@ Course Outline
   - Deployment.
   - Bonus (Animations, Next Steps, Webpack).
 
-  Seguir Desde el Video 15, Sección 2.
+  Spread & Rest Operators ( ... )
+
+Spread: Used to split up array elements OR object properties.
+const newArray = [...oldArray,1,2]
+const newObject = {..oldObject, newProp:5}
+
+Rest: Used to merge a list of function arguments into an array.
+function sortArgs(...args){
+  return args.sort();
+}
+
+Destructuring: easily extract array elements or object properties and store them in variables.
+Array Destructuring:
+[a,b] = ['Hello', 'Max']
+console.log(a); //Hello
+console.log(b); //Max
+Object Destructuring:
+{name} = {name: "Max", age: 28}
+console.log(name); //Max
+console.log(age); //undefined
+
+Objects y Arrays se manejan con referencias, si los intentas copiar con una asignación "="
+se copia el puntero no el contenido, si verdaderamente queres copiar el contenido de un objeto tenes que 
+crear otro objeto y copiar el contenido con el operador ...
+
+  
+install package to use :hover css pseudoclass. //higher order controller, inject some extra sintaxs.
+  npm install --save radium
+
+  mirar apartir del video 65.
