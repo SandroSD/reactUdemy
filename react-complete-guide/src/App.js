@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -92,18 +92,18 @@ class App extends Component {
       }*/
     }
 
-    const classes = [];
+    const assignedClasses = [];
     if(this.state.persons.length <= 2){
-      classes.push('red'); //añade al array la clase red.
+      assignedClasses.push(classes.red); //añade al array la clase red.
     }
     if(this.state.persons.length <= 1){
-      classes.push('bold'); //añade al array la clase bold y ya tiene red.
+      assignedClasses.push(classes.bold); //añade al array la clase bold y ya tiene red.
     }
     //join(' '), junta todos los elementos del array desde donde se los llame y los transforma a un string separados por el parámetro, en nuestro caso separado por un espacio.
     return (      
-        <div className="App">
+        <div className={classes.App}>
           <h1>Hi, I'm a React App</h1>
-          <p className={classes.join(' ')}>This is really working</p>
+          <p className={assignedClasses.join(' ')}>This is really working</p>
           <button 
             style={style}
             onClick={this.togglePersonsHandler}>Toggle Persons</button>

@@ -65,3 +65,10 @@ install package to use :hover css pseudoclass. //higher order controller, inject
   npm install --save radium
 
 Envolver todo lo que esta adentro de return con los tags StyleRoot para poder usar Radium y sus media queries.
+
+Para ejecutar "npm run eject" debemos tener todos los cambios commiteados.
+Una vez que ejecutamos el comando y ponemos la opción de "y", aparecerán nuevas carpetas, iremos a config y dentro
+de webpack.config.dev.js configuraremos para poder levantar los archivos css desde ese archivo.
+transforma codigo css en codigo javascript (clases con atributos)
+
+Desde el 66
