@@ -1,6 +1,8 @@
   Página Oficial: https://reactjs.org/
   - JSX sintaxis: javascript como html para React.
 
+compilar la app: npm start.
+
   class = className
 
   https://codepen.io/anon/pen/yEYoRe
@@ -71,4 +73,8 @@ Una vez que ejecutamos el comando y ponemos la opción de "y", aparecerán nueva
 de webpack.config.dev.js configuraremos para poder levantar los archivos css desde ese archivo.
 transforma codigo css en codigo javascript (clases con atributos)
 
-Desde el 66
+Enabling & Using CSS Module.
+Me permite cambiar las clases CSS a clases JS (se importan y se usan).
+Hay que reiniciar la ejecución de la App para que funcione.
+
+Desde el 70

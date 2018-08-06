@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.css';
+//import Radium, {StyleRoot} from 'radium';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -58,13 +59,14 @@ class App extends Component {
   }
 
   render() {
+    let btnClass = '';
     const style = {
-      backgroundColor: 'green',
+      /*backgroundColor: 'green',
       color: 'white',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer',
+      cursor: 'pointer',*/
       /*':hover': {
         backgroundColor: 'lightgreen',
         color: 'black'
@@ -85,11 +87,12 @@ class App extends Component {
           })}          
         </div>
       );
-      style.backgroundColor = 'red';
-      /*style[':hover'] = {
+      btnClass = classes.Red;
+      //style.backgroundColor = 'red';
+      style[':hover'] = {
         backgroundColor: 'salmon',
         color: 'black'
-      }*/
+      }
     }
 
     const assignedClasses = [];
@@ -100,15 +103,18 @@ class App extends Component {
       assignedClasses.push(classes.bold); //añade al array la clase bold y ya tiene red.
     }
     //join(' '), junta todos los elementos del array desde donde se los llame y los transforma a un string separados por el parámetro, en nuestro caso separado por un espacio.
-    return (      
+    return (
+      //<StyleRoot>
         <div className={classes.App}>
           <h1>Hi, I'm a React App</h1>
           <p className={assignedClasses.join(' ')}>This is really working</p>
           <button 
-            style={style}
+            //style={style}
+            className = {btnClass}
             onClick={this.togglePersonsHandler}>Toggle Persons</button>
             {persons}
         </div>
+      //</StyleRoot>
       
     );
 
@@ -117,4 +123,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App/*Radium(App)*/; //higher order component.
