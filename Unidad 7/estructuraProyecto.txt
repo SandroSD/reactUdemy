@@ -1,0 +1,72 @@
+Hasta la unidad 6, usamos solo 2 componentes: App y Person.
+
+App.js se puede separar un poco mas.
+
+
+Stateless vs Stateful Components (functional components).
+
+    Stateful(Containers)                    Stateless
+- class XY extend Component               - const XY = (props) => {...}
+- access to State (Yes)                   - access to State (No)
+- lifecycle Hooks (Yes)                   - lifecycle Hooks (No)
+- Access State and Props via "this        - Access Props via "props"
+- this.state.XY & this.props.XY           - props.XY
+- Use only if you need to manage          - Use in all other cases
+    State or access to
+    Lifecycle hooks!
+
+
+Component Lifecycle (only available in Stateful Components!).
+
+constructor(). 
+componentWillMount().
+componentWillReceiveProps().
+shouldComponentUpdate().
+componentWillUpdate().
+componentDidUpdate().
+componentDidCatch().
+componentDidMount().
+componentWillUnmount().
+render().
+
+Methods executed during creation.
+    1- constructor().
+    2- componentWillMount().
+    3- componentDidMount().
+    4- render().
+
+-Process
+    constructor(props)  -   Default ES6 class feature.
+        Call super(props). DO: Set up State.    DON'T: Cause Side-Effects.
+        If we do implement this method we do have to call super and pass on props,
+        this calls the constructor of the parent class and since we can only implement
+        method in stateful components, the parent class is this component object we 
+        imported from react. And by calling super and passing on props thins like
+        this.props which we then need to use anywhere else in the component get 
+        populated or managed by react.
+        So always call super and pass in props if you implement the constructor.
+    
+    componentWillMount()    -   Exists for historic reasons.
+        DO: Update State, last minute optimization.     DON'T: Cause Side-Effects.
+        This is a method defined by react and it is available because we extend that
+        from the react library. componentWillMount exists for historic reasons mainly, 
+        you don't really use it that often anymore.
+        If you use it, you want to use it to update your state here, do some last minute
+        optimizations but still you shouldn't cause side effects here, you shouldn't reach 
+        out to the web. Now as i mentioned, you don't really use it that often anymore,
+        it still exists but chances are you won't implement it in your application.
+    
+    render()    -   Prepare & Structure your JSX Code.
+        Executing the render method does not mean that is accesses the real dom.
+        Is an important step because it clearly defines how your application or how this
+        component should look like from a html perspective.
+        Here you prepare and structure your jsx code, defining which content gets render
+        for this component.
+    
+    Render Child Components.
+
+    componentDidMount()
+    DO: Cause Side-Effects.     DON'T: Update State(triggers re-render).
+
+
+    

@@ -77,4 +77,9 @@ Enabling & Using CSS Module.
 Me permite cambiar las clases CSS a clases JS (se importan y se usan).
 Hay que reiniciar la ejecución de la App para que funcione.
 
-Desde el 70
+Crear la mayor cantidad de componentes con const no Class.
+Usar una sola clase que maneje el state y que las subclases hagan tareas cortas y definidas.
+
+No hace falta definir "props" como parámetro en stateful component?
+
+video 86
