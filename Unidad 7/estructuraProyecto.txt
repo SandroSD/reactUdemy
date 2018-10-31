@@ -68,5 +68,45 @@ Methods executed during creation.
     componentDidMount()
     DO: Cause Side-Effects.     DON'T: Update State(triggers re-render).
 
+    componentWillReceiveProps(nextProps)
+    DO: Sync State to Props     DON'T: Cause Side-Effects
 
-    
+    Syncronize our local state of the component if we have one to the props. So initialize
+    a state with the props so that we then later can change the state in that component but 
+    get the base state depending on the outer props. If you don't need to syncronize this you
+    probably don't need to implement this method.
+    What you shouldn't do here is case side effects so don't reach out to the web and fetch 
+    data or something  like that because this will lead to a re-rendering of the component 
+    and hence to performance issues.
+
+    shouldComponentUpdate(nextProps, nextState)     May cancel updating process!
+
+    This is a method which may actually cancel the updating process, yu can decide if it should
+    or not. Because if you return T here, the updating continues, if you return false, the updating
+    stops. In all the other methods, you never return anything. But here you can return T or F and it 
+    does have an impact.
+    If you return false you're basically save performance because react doesn't need to go through the
+    whole component tree and call render and so on but of course it may also show to your application 
+    showing an incorrect state or basically having an incorrect DOM representation if you use this 
+    in a wrong way.
+
+    ComponentWillUpdate(nextProps, nextState)
+    DO: Sync State to Props     DON'T: Cause Side-Effects
+
+    There again you may sync your state to props and you shouldn't cause side effects. It might be the 
+    better place to syncronize your state to props because unlike componentWillReceiveProps, here you 
+    know that you're going to continue with the updating so you might not spend effort and resources 
+    for something which then doesn't matter anyways.
+    Once this has executed succesfully, you reached a render method again, hence rendering the jsx 
+    and telling react what will actually be the result of your updated component.
+    And there again as always, you should prepared and struture your jsx code.
+    Thereafter react will go ahead and update all child components, all child components props to be 
+    precise and that of course may trigger updates for the child components just as it did trigger an 
+    update for  this component and then it would call componentDidUpdate at the end.
+    There you may now cause side effects just like in DidMount, you mustn't update the state here
+    though because this will trigger a re-render so it's basically comparable to componentDidMount just
+    for the updating case.
+
+    Video 89, tomar nota de los métodos lifecycle.
+
+    Mirar desde el video 90.

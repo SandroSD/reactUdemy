@@ -26,6 +26,18 @@ class App extends Component {
   componentDidMount(){
     console.log('[App.js] Inside componentDidMount()');
   }
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('[UPDATE App.js] Inside shouldComponentUpdate', nextProps, nextState);
+    return true;
+  }
+  componentWillUpdate(nextProps, nextState){
+    console.log('[UPDATE App.js] Inside componentWillUpdate', nextProps, nextState);
+    return true;
+  }
+  componentDidUpdate(){
+    console.log('[UPDATE App.js] Inside componentDidUpdate');
+    return true;
+  }
 
     //props are set and passed from outside. managed from inside the component.
   //switchNameHandler = (newName) =>{
