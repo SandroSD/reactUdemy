@@ -1,0 +1,38 @@
+Redux(State Management Can Be Hard)
+
+State ?
+- ingredients added to Burger.
+- is user authenticated.
+- is a modal open.
+- list of blog posts.
+
+Redux Flow.
+1) It's all about a central store we have in each redux application. Third party library, works independient with react.
+This store, stores entire application state.
+2) Components wants to manipulate or get the current application state.
+Redux about: having a clearly defined process of how your state may change.
+
+The first building block besides the central store are actions which are dispatched fro your javascript code, in a react app
+they are dispatched from within your Components. And action is just information package in the end with a type, something 
+like addIngredient or removeIngredient, a description.
+
+The thing changing the store is a reducer. We can combine multiple reducers into one, but in the end, you'll end up with one route 
+reducer which is directly connected to your store in the end.
+So the action reaches the reducer and since the action contains a type, the reducer can check the type of the action. For example,
+if it's addIngedient and we then define the code for that type of action in the reducer.
+The reducer in the end is just a pure function which receives the action and the old state as input and which then spits out an
+updated state.
+The important thing is that the reducer has to execute synchronous code only, no asynchronous code, no asynchronous code, no side
+effects, no HTTP request.
+
+How do we get the updated state back into our component then?
+For that, we use a subscription model.
+
+The store triggers all subscriptions whenever the state changes, whenever the state is updated in the store. And of course our
+component can subscribe to store updates and it then receives that update automatically.
+
+Sección 14, Clase 256. Immutable Update Patters
+https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns
+
+video 258, 09:35
+
