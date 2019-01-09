@@ -36,3 +36,10 @@ https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns
 
 video 258, 09:35
 
+Es necesario manejar todos los state en Redux?
+Types of State
+
+Types                           Example                                         Use Redux?
+Local UI State                  Show / Hide Backdrop                            Mostly handled within components
+Persistent State                All Users, all Posts, ...                       Stored on Server, relevant slice managed by Redux
+Client State                    Is Authenticated? Filters set by User, ...      Managed via Redux
