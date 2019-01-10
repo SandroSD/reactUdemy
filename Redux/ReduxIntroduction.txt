@@ -43,3 +43,9 @@ Types                           Example                                         
 Local UI State                  Show / Hide Backdrop                            Mostly handled within components
 Persistent State                All Users, all Posts, ...                       Stored on Server, relevant slice managed by Redux
 Client State                    Is Authenticated? Filters set by User, ...      Managed via Redux
+
+https://redux.js.org/
+https://redux.js.org/introduction/core-concepts
+https://redux.js.org/basics/actions
+https://redux.js.org/basics/reducers
+https://redux.js.org/faq

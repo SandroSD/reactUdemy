@@ -27,3 +27,8 @@ State
     - Ingredients (object)
     - Purchased (bool)
     - TotalPrice (float)
+
+components: stateless components.
+containers: stateful components.
+
+Video 117, min 4:44
