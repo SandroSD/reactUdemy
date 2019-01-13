@@ -1,3 +1,34 @@
 Adding Middleware
 
 Action -> Middleware -> Reducer
+
+Extensión: Redux DevTools
+
+"No store found". //configurar
+https://extension.remotedev.io/#usage
+
+Jump | Skip  => Redux DevTools
+
+Async Code Redux: Action Creators
+
+Librería para ejecutar código asíncrono en React: https://github.com/reduxjs/redux-thunk
+
+Antes de almacenar un dato podemos modificarlo en Reducer o en el Action Creator.
+
+                                Where to put the Logic ?
+Action Creators                                         Reducer
+Can run Async Code                                      Pure, Sync Code Only!
+Shouldn't Prepare the State Update Too Much             Core Redux Concept: Reducers update the State
+
+Recomienda en el Reducer pero no está mal ponerla en el Action Creator, que solo quede en un solo lugar.
+
+En caso de que el proyecto sea mas grande, podemos reordenar quitando la carpeta store, con los actions 
+y reducers de todos los componentes y creando una carpeta store dentro del componente
+
+containers
+    Counter
+        store
+            actions.js
+            reducer.js
+
+Mirar en la página de Redux: Immutable Update Patterns, para objetos muy grandes con varios hijos anidados.
