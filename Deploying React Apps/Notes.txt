@@ -1,0 +1,8 @@
+                                                Deployment Steps
+
+Check (and Ajust) Basepath                                          <BrowserRouter basename="/my-app/">
+Build and Optimize Project                                          npm run in create-react-app project
+Server must ALWAYS serve index.html (also for 404 cases)            To ensure that Routing works correctly
+Upload Build Artifacts to (static) Server                           In /build folder when using create-react-app
+
+En consola, en la ruta general del proyecto: npm run build
